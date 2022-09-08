@@ -4,6 +4,8 @@
 * main - printing in the put function
 *
 * Description: using the main function
+* output "programming is like building a multilingual puzzle"
+* Return: 0
 */
 int main(void)
 {
