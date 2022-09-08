@@ -4,6 +4,8 @@
 * main - print the string
 *
 * Description: main funciton
+* output: programming is like building a multilingual puzzle
+* Return: 0
 */
  int main(void)
 {
