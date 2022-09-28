@@ -14,8 +14,8 @@ int _sqrt_recursion(int n)
 }
 /**
  * _sqrt - returns the square of a number
- *@n: number
- *@x: number
+ * @n: number
+ * @x: number
  *
  * Return: returns
  */
