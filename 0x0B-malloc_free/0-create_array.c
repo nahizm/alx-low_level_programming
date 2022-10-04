@@ -1,26 +1,19 @@
-#include "main.h"
+#include "notrebloh.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
 
 /**
-* create array - creates array of chars, and
-* initializes it with a specific char.
-*@size: size of the array
-*@c: character
-*Return: NULL if size is zero
-*pointer to array if everything is normal.
-*/
-
-char *create_array(unsigned int size, char c)
+ * *malloc_checked - allocate memory with malloc
+ * @b: unsigned int type
+ * Return: return pointer
+ */
+void *malloc_checked(unsigned int b)
 {
-	char *array;
-	unsigned int index;
+	int *ptr;
 
-
-	if (size == 0)
-		return (NULL);
-	array = malloc(sizeof(char) * size);
-	if (array == NULL)
-		return (NULL);
-	for (index = 0; index < size; index++)
-		array[index] = c;
-	return (array);
+	ptr = malloc(b);
+	if (ptr == NULL)
+		exit(98);
+	return (ptr);
 }
