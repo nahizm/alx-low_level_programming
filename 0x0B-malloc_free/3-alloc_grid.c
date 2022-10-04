@@ -3,44 +3,36 @@
 
 /**
  * alloc_grid - returns a pointer
- * @width: width of array
- * @height: height of array
+ * @x: width of array
+ * @y: height of array
  * Return: pointer to array
  */
 
 int **alloc_grid(int width, int height)
 {
 	int **array;
-	int i = 0, j;
+	int x, y;
 
-	if (width == 0 || height ==0)
+	if (width <= 0 || height <= 0)
 		return (NULL);
-	array = (int **) malloc(sizeof(int *) * height);
-	if (array[i] != NULL)
+	array = malloc(sizeof(int *) * height);
+	if (array == NULL)
+		return (NULL);
+	for (x = 0; x < height; x++)
 	{
-		for (; i < height; i++)
+		array[x] = malloc(sizeof(int) * width);
+		if (array[x] == NULL)
 		{
-			array[i] = (int *) malloc(sizeof(int) * width);
-			if (array[i] != NULL)
-			{
-				for (j = 0; j < width; j++)
-					array[i][j] = 0;
-			}
-			else
-			{
-				while (i >= 0)
-				{
-					free(array[i]);
-					i--;
-				}
-				free(array);
-				return (NULL);
-			}
+			for (; x >= 0; x--)
+				free(array[x]);
+			free(array);
+			return (NULL);
 		}
-		return (array);
 	}
-	else
+	for (x = 0; x< height; x++)
 	{
-		return (NULL);
+		for (y = 0; y < width; y++)
+			array[x][y] = 0;
 	}
+	return (array);
 }
