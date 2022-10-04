@@ -5,7 +5,7 @@
 * initialize it
 * @size: size of the array
 * @c: character
-* description: 
+* description: safdsdf
 * Return: NULL if size is zero
 * pointer to array.
 */
