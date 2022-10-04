@@ -7,7 +7,7 @@
  * Return: pointer to array
  */
 
-int *alloc_grid(int width, int height);
+int **alloc_grid(int width, int height);
 {
 	int **array;
 	int i = 0, j;
@@ -17,7 +17,7 @@ int *alloc_grid(int width, int height);
 	array = (int **) malloc(sizeof(int *) * height);
 	if (array[i] != NULL)
 	{
-		for (i = 0; i < height; i++)
+		for (; i < height; i++)
 		{
 			array[i] = (int *) malloc(sizeof(int) * width);
 			if (array[i] != NULL)
