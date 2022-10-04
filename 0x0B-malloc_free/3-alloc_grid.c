@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * alloc_grid - returns a pointer
@@ -7,7 +8,7 @@
  * Return: pointer to array
  */
 
-int **alloc_grid(int width, int height);
+int **alloc_grid(int width, int height)
 {
 	int **array;
 	int i = 0, j;
