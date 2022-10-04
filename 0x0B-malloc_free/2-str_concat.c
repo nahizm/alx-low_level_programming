@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * @s1: s1
- * @s2: s2
  * str_concat - a function that concatenates
+ * @s1: first string
+ * @s2: second string
  * Return: NULL if error
  */
 
